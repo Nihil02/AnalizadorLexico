@@ -24,7 +24,9 @@ public class LexerTest {
 
     @Test
     public void intMatch() throws IOException{
-        genericMatch("21", Diccionario.INT);
+        for (int i = 0; i < 10; i++) {
+            genericMatch(String.valueOf(i), Diccionario.INT);
+        }
     }
 
     @Test
@@ -34,7 +36,7 @@ public class LexerTest {
 
     @Test
     public void comMatch() throws IOException{
-        genericMatch("", null);
+        genericMatch("/**/", Diccionario.COMENTARIO);
     }
 
     @Test
