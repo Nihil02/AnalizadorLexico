@@ -21,13 +21,14 @@ package org.LengAuto.AnalizadorLexico.Modelo;
     Digito = [0-9]
     FinLinea = [\r|\n|\r\n]
     Vacio = [FinLinea|\t,\s]+
+    Comentario = "/*"({Letra}|{Digito}|{Vacio})*"*/"
 %%
 
 // Definición de reglas
     //Misc
     {FinLinea}   {return new Token(Diccionario.FINLINEA, yytext());}
     {Vacio}      {return new Token(Diccionario.VACIO, yytext());}
-    "/*"({Letra}|{Digito}|{Vacio})*"*/" {/**/}
+    {Comentario} {return new Token(Diccionario.COMENTARIO, yytext());}
 
     //Operadores
     "+"    {return new Token(Diccionario.SUMA, yytext());}
