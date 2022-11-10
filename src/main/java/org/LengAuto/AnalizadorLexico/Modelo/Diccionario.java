@@ -14,6 +14,7 @@ public enum Diccionario {
     ASIGNAR,
     IF,
     WHILE,
+    COMENTARIO,
     FINLINEA,
     VACIO,
     PINICIO,
