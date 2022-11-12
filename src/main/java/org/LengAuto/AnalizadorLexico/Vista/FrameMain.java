@@ -5,9 +5,8 @@ import org.LengAuto.AnalizadorLexico.Modelo.Lexer;
 import org.LengAuto.AnalizadorLexico.Modelo.Token;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.*;
 
 public class FrameMain extends JFrame {
@@ -18,6 +17,7 @@ public class FrameMain extends JFrame {
     private JScrollPane pnlResultado;
     private JButton btnAnalizar;
     private JButton btnAbrirArchivo;
+    private final String ruta = System.getProperty("user.dir") + "\\archivo.txt";
 
     public FrameMain() throws HeadlessException {
         setContentPane(pnlMain);
@@ -28,10 +28,10 @@ public class FrameMain extends JFrame {
         setVisible(true);
 
         btnAnalizar.addActionListener(e -> analizar());
+        btnAbrirArchivo.addActionListener(e -> abrirArchivo());
     }
 
     void analizar() {
-        String ruta = System.getProperty("user.dir") + "\\archivo.txt";
         File archivo = new File(ruta);
         PrintWriter printWriter;
 
@@ -45,16 +45,40 @@ public class FrameMain extends JFrame {
             BufferedReader buffer = new BufferedReader(new FileReader(archivo));
             Lexer lexer = new Lexer(buffer);
             Token tokens;
-            String aux;
-            txtResultado.setText("");
+            StringBuilder aux = new StringBuilder();
 
             do{
                 tokens = lexer.yylex();
-                aux = txtResultado.getText();
-                txtResultado.setText(aux + tokens.toString() + "\n");
+                aux.append(tokens.toString()).append("\n");
             }while(tokens.getDiccionario() != Diccionario.EOF);
+
+            txtResultado.setText(aux.toString());
         }
         catch (IOException e){System.out.println(e+"");}
     }
 
+    void abrirArchivo(){
+        JFileChooser jfcSeleccionar = new JFileChooser();
+        FileNameExtensionFilter filtro =
+                new FileNameExtensionFilter("Archivos de texto", "txt");
+        jfcSeleccionar.setFileFilter(filtro);
+        jfcSeleccionar.setCurrentDirectory(new File(ruta));
+
+        int returnVal = jfcSeleccionar.showOpenDialog(null);
+        if(returnVal == JFileChooser.APPROVE_OPTION) {
+            try{
+                File archivo = jfcSeleccionar.getSelectedFile();
+                int i;
+                StringBuilder aux = new StringBuilder();
+                BufferedReader buffer = new BufferedReader(new FileReader(archivo));
+
+                while((i = buffer.read()) != -1){
+                    aux.append((char)i);
+                }
+
+                txtEditor.setText(aux.toString());
+            }
+            catch (Exception e){System.out.println(e+"");}
+        }
+    }
 }
