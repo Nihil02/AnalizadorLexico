@@ -14,33 +14,18 @@ public class LexerTest {
         Reader stringReader= new StringReader(strTest);
         Lexer lexer = new Lexer(stringReader);
         Token token = lexer.yylex();
-        assertEquals(dicval, token.getDiccionario());
-    }
-
-    @Test
-    public void errorMatch() throws IOException{
-        genericMatch("@", Diccionario.ERROR);
+        assertEquals(dicval, token.getTipo());
     }
 
     @Test
     public void intMatch() throws IOException{
         for (int i = 0; i < 10; i++) {
-            genericMatch(String.valueOf(i), Diccionario.INT);
+            genericMatch(String.valueOf(i), Diccionario.T_INT_LITERAL);
         }
     }
 
     @Test
     public void decMatch() throws IOException{
-        genericMatch("1.1", Diccionario.DEC);
-    }
-
-    @Test
-    public void comMatch() throws IOException{
-        genericMatch("/**/", Diccionario.COMENTARIO);
-    }
-
-    @Test
-    public void eolMatch() throws IOException{
-        genericMatch("\n", Diccionario.FINLINEA);
+        genericMatch("1.1", Diccionario.T_DECIMAL_LITERAL);
     }
 }

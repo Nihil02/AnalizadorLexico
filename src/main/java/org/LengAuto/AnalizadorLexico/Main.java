@@ -1,6 +1,5 @@
 package org.LengAuto.AnalizadorLexico;
 
-
 import org.LengAuto.AnalizadorLexico.Modelo.*;
 
 import java.io.BufferedReader;
@@ -21,7 +20,7 @@ public class Main {
              do{
                  tokens = lexer.yylex();
                  System.out.println(tokens.toString());
-            }while(tokens.getDiccionario() != Diccionario.EOF);
+            }while(tokens.getTipo() != Diccionario.T_EOF);
         }
         catch (IOException e){System.out.println(e.toString());}
     }
