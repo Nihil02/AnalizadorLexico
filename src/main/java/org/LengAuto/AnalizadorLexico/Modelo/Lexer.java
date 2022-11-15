@@ -342,11 +342,11 @@ public class Lexer {
     "\1\10\1\11\1\1\1\12\2\13\1\1\1\14\10\4"+
     "\1\15\1\16\1\17\3\20\4\0\1\21\1\22\4\4"+
     "\1\23\3\4\1\24\1\25\1\26\1\27\1\0\2\20"+
-    "\1\30\1\31\1\32\14\4\1\33\4\4\1\34\2\4"+
-    "\1\35\2\4\1\36\1\4\1\37\1\40";
+    "\1\30\1\31\1\32\15\4\1\33\4\4\1\34\1\35"+
+    "\2\4\1\36\2\4\1\37\1\4\1\40\1\41";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[82];
+    int [] result = new int[84];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -379,12 +379,12 @@ public class Lexer {
     "\0\u0570\0\220\0\u05a0\0\u05d0\0\u0600\0\140\0\140\0\140"+
     "\0\140\0\u0630\0\140\0\u0660\0\u0450\0\u0480\0\u04b0\0\u0690"+
     "\0\u06c0\0\u06f0\0\u0720\0\u0750\0\u0780\0\u07b0\0\u07e0\0\u0810"+
-    "\0\u0840\0\u0870\0\u08a0\0\220\0\u08d0\0\u0900\0\u0930\0\u0960"+
-    "\0\220\0\u0990\0\u09c0\0\220\0\u09f0\0\u0a20\0\220\0\u0a50"+
-    "\0\220\0\220";
+    "\0\u0840\0\u0870\0\u08a0\0\u08d0\0\220\0\u0900\0\u0930\0\u0960"+
+    "\0\u0990\0\220\0\220\0\u09c0\0\u09f0\0\220\0\u0a20\0\u0a50"+
+    "\0\220\0\u0a80\0\220\0\220";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[82];
+    int [] result = new int[84];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -449,29 +449,30 @@ public class Lexer {
     "\15\6\4\0\1\6\7\0\4\6\3\0\11\6\1\102"+
     "\5\6\1\0\15\6\4\0\1\6\7\0\4\6\3\0"+
     "\15\6\1\103\1\6\1\0\15\6\4\0\1\6\7\0"+
-    "\4\6\3\0\17\6\1\0\10\6\1\76\4\6\4\0"+
-    "\1\6\7\0\4\6\3\0\17\6\1\0\2\6\1\104"+
-    "\12\6\4\0\1\6\7\0\4\6\3\0\4\6\1\105"+
+    "\4\6\3\0\17\6\1\0\10\6\1\104\4\6\4\0"+
+    "\1\6\7\0\4\6\3\0\17\6\1\0\2\6\1\105"+
+    "\12\6\4\0\1\6\7\0\4\6\3\0\4\6\1\106"+
     "\12\6\1\0\15\6\4\0\1\6\7\0\4\6\3\0"+
-    "\10\6\1\106\6\6\1\0\15\6\4\0\1\6\7\0"+
-    "\4\6\3\0\13\6\1\107\3\6\1\0\15\6\4\0"+
-    "\1\6\7\0\4\6\3\0\15\6\1\110\1\6\1\0"+
-    "\15\6\4\0\1\6\7\0\4\6\3\0\12\6\1\111"+
+    "\10\6\1\107\6\6\1\0\15\6\4\0\1\6\7\0"+
+    "\4\6\3\0\13\6\1\110\3\6\1\0\15\6\4\0"+
+    "\1\6\7\0\4\6\3\0\15\6\1\111\1\6\1\0"+
+    "\15\6\4\0\1\6\7\0\4\6\3\0\12\6\1\112"+
     "\4\6\1\0\15\6\4\0\1\6\7\0\4\6\3\0"+
-    "\1\112\16\6\1\0\15\6\4\0\1\6\7\0\4\6"+
-    "\3\0\1\113\16\6\1\0\15\6\4\0\1\6\7\0"+
-    "\4\6\3\0\12\6\1\114\4\6\1\0\15\6\4\0"+
-    "\1\6\7\0\4\6\3\0\13\6\1\115\3\6\1\0"+
-    "\15\6\4\0\1\6\7\0\4\6\3\0\11\6\1\116"+
-    "\5\6\1\0\15\6\4\0\1\6\7\0\4\6\3\0"+
-    "\7\6\1\117\7\6\1\0\15\6\4\0\1\6\7\0"+
-    "\4\6\3\0\1\120\16\6\1\0\15\6\4\0\1\6"+
-    "\7\0\4\6\3\0\12\6\1\121\4\6\1\0\15\6"+
-    "\4\0\1\6\7\0\4\6\3\0\14\6\1\122\2\6"+
-    "\1\0\14\6";
+    "\17\6\1\0\2\6\1\113\12\6\4\0\1\6\7\0"+
+    "\4\6\3\0\1\114\16\6\1\0\15\6\4\0\1\6"+
+    "\7\0\4\6\3\0\1\115\16\6\1\0\15\6\4\0"+
+    "\1\6\7\0\4\6\3\0\12\6\1\116\4\6\1\0"+
+    "\15\6\4\0\1\6\7\0\4\6\3\0\13\6\1\117"+
+    "\3\6\1\0\15\6\4\0\1\6\7\0\4\6\3\0"+
+    "\11\6\1\120\5\6\1\0\15\6\4\0\1\6\7\0"+
+    "\4\6\3\0\7\6\1\121\7\6\1\0\15\6\4\0"+
+    "\1\6\7\0\4\6\3\0\1\122\16\6\1\0\15\6"+
+    "\4\0\1\6\7\0\4\6\3\0\12\6\1\123\4\6"+
+    "\1\0\15\6\4\0\1\6\7\0\4\6\3\0\14\6"+
+    "\1\124\2\6\1\0\14\6";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[2688];
+    int [] result = new int[2736];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -515,10 +516,10 @@ public class Lexer {
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
     "\2\0\3\11\1\1\5\11\1\1\1\11\15\1\1\11"+
-    "\4\1\4\0\2\11\10\1\4\11\1\0\1\11\37\1";
+    "\4\1\4\0\2\11\10\1\4\11\1\0\1\11\41\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[82];
+    int [] result = new int[84];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -621,10 +622,9 @@ public class Lexer {
         return symbol(Diccionario.T_DECIMAL_LITERAL, value);
     }
 
-    private Token booleano(String text) {
-            boolean value = (text == "True")? true:false;
+    private Token booleano(boolean value) {
             return symbol(Diccionario.T_BOOL_LITERAL, value);
-        }
+    }
 
 
   /**
@@ -1024,163 +1024,168 @@ public class Lexer {
             { throw new Error("Illegal character <" +yytext() + ">");
             }
             // fall through
-          case 33: break;
+          case 34: break;
           case 2:
             { /* ignorar */
             }
             // fall through
-          case 34: break;
+          case 35: break;
           case 3:
             { string.setLength(0); yybegin(CADENA_DE_TEXTO);
             }
             // fall through
-          case 35: break;
+          case 36: break;
           case 4:
             { return symbol(Diccionario.T_IDENTIFIER, yytext());
             }
             // fall through
-          case 36: break;
+          case 37: break;
           case 5:
             { return symbol(Diccionario.T_BPARENTHESIS, yytext());
             }
             // fall through
-          case 37: break;
+          case 38: break;
           case 6:
             { return symbol(Diccionario.T_EPARENTHESIS, yytext());
             }
             // fall through
-          case 38: break;
+          case 39: break;
           case 7:
             { return symbol(Diccionario.T_MULTIPLICATION, yytext());
             }
             // fall through
-          case 39: break;
+          case 40: break;
           case 8:
             { return symbol(Diccionario.T_ADD, yytext());
             }
             // fall through
-          case 40: break;
+          case 41: break;
           case 9:
             { return symbol(Diccionario.T_SUBTRACTION, yytext());
             }
             // fall through
-          case 41: break;
+          case 42: break;
           case 10:
             { return symbol(Diccionario.T_DIVISION, yytext());
             }
             // fall through
-          case 42: break;
+          case 43: break;
           case 11:
             { return integer(yytext(), 10);
             }
             // fall through
-          case 43: break;
+          case 44: break;
           case 12:
             { return symbol(Diccionario.T_ASSIGN, yytext());
             }
             // fall through
-          case 44: break;
+          case 45: break;
           case 13:
             { string.append(yytext() );
             }
             // fall through
-          case 45: break;
+          case 46: break;
           case 14:
             { yybegin(YYINITIAL);
         return symbol(Diccionario.T_ENCAPSULATED_STRING, string.toString());
             }
             // fall through
-          case 46: break;
+          case 47: break;
           case 15:
             { string.append('\\');
             }
             // fall through
-          case 47: break;
+          case 48: break;
           case 16:
             { return decimal(yytext());
             }
             // fall through
-          case 48: break;
+          case 49: break;
           case 17:
             { return symbol(Diccionario.T_DIFFER, yytext());
             }
             // fall through
-          case 49: break;
+          case 50: break;
           case 18:
             { return symbol(Diccionario.T_EQUALS, yytext());
             }
             // fall through
-          case 50: break;
+          case 51: break;
           case 19:
             { return symbol(Diccionario.T_CONDITIONAL, yytext());
             }
             // fall through
-          case 51: break;
+          case 52: break;
           case 20:
             { string.append('\"');
             }
             // fall through
-          case 52: break;
+          case 53: break;
           case 21:
             { string.append('\n');
             }
             // fall through
-          case 53: break;
+          case 54: break;
           case 22:
             { string.append('\r');
             }
             // fall through
-          case 54: break;
+          case 55: break;
           case 23:
             { string.append('\t');
             }
             // fall through
-          case 55: break;
+          case 56: break;
           case 24:
             { return integer(yytext(), 2);
             }
             // fall through
-          case 56: break;
+          case 57: break;
           case 25:
             { return integer(yytext(), 8);
             }
             // fall through
-          case 57: break;
+          case 58: break;
           case 26:
             { return integer(yytext(), 16);
             }
             // fall through
-          case 58: break;
+          case 59: break;
           case 27:
-            { return booleano(yytext());
+            { return booleano(true);
             }
             // fall through
-          case 59: break;
+          case 60: break;
           case 28:
             { return symbol(Diccionario.T_TYPE_STRING, yytext());
             }
             // fall through
-          case 60: break;
-          case 29:
-            { return symbol(Diccionario.T_TYPE_INT, yytext());
-            }
-            // fall through
           case 61: break;
-          case 30:
-            { return symbol(Diccionario.T_TYPE_DECIMAL, yytext());
+          case 29:
+            { return booleano(false);
             }
             // fall through
           case 62: break;
-          case 31:
-            { return symbol(Diccionario.T_TYPE_BOOLEAN, yytext());
+          case 30:
+            { return symbol(Diccionario.T_TYPE_INT, yytext());
             }
             // fall through
           case 63: break;
-          case 32:
-            { return symbol(Diccionario.T_BUCLE, yytext());
+          case 31:
+            { return symbol(Diccionario.T_TYPE_DECIMAL, yytext());
             }
             // fall through
           case 64: break;
+          case 32:
+            { return symbol(Diccionario.T_TYPE_BOOLEAN, yytext());
+            }
+            // fall through
+          case 65: break;
+          case 33:
+            { return symbol(Diccionario.T_BUCLE, yytext());
+            }
+            // fall through
+          case 66: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

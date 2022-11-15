@@ -1,2 +1,6 @@
-2 + 2.2
-(3) + 3
+Hola
+Adios
+1234
+true
+false
+"Profa ponganos 100"

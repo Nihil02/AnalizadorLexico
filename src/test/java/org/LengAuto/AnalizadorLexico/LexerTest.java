@@ -28,4 +28,12 @@ public class LexerTest {
     public void decMatch() throws IOException{
         genericMatch("1.1", Diccionario.T_DECIMAL_LITERAL);
     }
+
+    @Test
+    public void boolMatch() throws IOException {
+        Reader stringReader= new StringReader("true");
+        Lexer lexer = new Lexer(stringReader);
+        Token token = lexer.yylex();
+        assertEquals(true, token.getLexema());
+    }
 }

@@ -34,10 +34,9 @@ package org.LengAuto.AnalizadorLexico.Modelo;
         return symbol(Diccionario.T_DECIMAL_LITERAL, value);
     }
 
-    private Token booleano(String text) {
-            boolean value = (text == "True")? true:false;
+    private Token booleano(boolean value) {
             return symbol(Diccionario.T_BOOL_LITERAL, value);
-        }
+    }
 %}
 
 %eofval{
@@ -61,7 +60,8 @@ package org.LengAuto.AnalizadorLexico.Modelo;
     /*Reservadas*/
     "SI"                           { return symbol(Diccionario.T_CONDITIONAL, yytext()); }
     "MIENTRAS"                     { return symbol(Diccionario.T_BUCLE, yytext()); }
-    "true" | "false"               { return booleano(yytext()); }
+    "true"                         { return booleano(true); }
+    "false"                        { return booleano(false); }
 
     /*Tipo de dato*/
     "ENTERO"                       { return symbol(Diccionario.T_TYPE_INT, yytext()); }
