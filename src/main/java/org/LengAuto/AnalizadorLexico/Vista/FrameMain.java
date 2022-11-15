@@ -32,25 +32,16 @@ public class FrameMain extends JFrame {
     }
 
     void analizar() {
-        File archivo = new File(ruta);
-        PrintWriter printWriter;
-
-        try {
-            printWriter = new PrintWriter(archivo);
-            printWriter.print(txtEditor.getText());
-            printWriter.close();
-        } catch (FileNotFoundException e) {System.out.println(e+"");}
-
         try{
-            BufferedReader buffer = new BufferedReader(new FileReader(archivo));
-            Lexer lexer = new Lexer(buffer);
+            String textoEditor = txtEditor.getText();
+            Lexer lexer = new Lexer(new StringReader(textoEditor));
             Token tokens;
             StringBuilder aux = new StringBuilder();
 
             do{
                 tokens = lexer.yylex();
                 aux.append(tokens.toString()).append("\n");
-            }while(tokens.getDiccionario() != Diccionario.EOF);
+            }while(tokens.getTipo() != Diccionario.T_EOF);
 
             txtResultado.setText(aux.toString());
         }
