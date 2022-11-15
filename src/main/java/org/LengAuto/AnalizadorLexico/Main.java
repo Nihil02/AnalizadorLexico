@@ -1,14 +1,12 @@
 package org.LengAuto.AnalizadorLexico;
 
-import org.LengAuto.AnalizadorLexico.Modelo.*;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import org.LengAuto.AnalizadorLexico.Vista.FrameMain;
 
 public class Main {
     public static void main(String[] args) {
-        try{
+        FrameMain frameMain = new FrameMain();
+
+        /*try{
             String archivo = System.getProperty("user.dir") + "\\archivo.txt";
             System.out.println(archivo);
 
@@ -22,6 +20,6 @@ public class Main {
                  System.out.println(tokens.toString());
             }while(tokens.getTipo() != Diccionario.T_EOF);
         }
-        catch (IOException e){System.out.println(e.toString());}
+        catch (IOException e){System.out.println(e.toString());};*/
     }
 }
